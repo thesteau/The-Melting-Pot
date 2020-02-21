@@ -145,6 +145,6 @@ def main():
     ### Step 5
     exporting_porcess(fatal_frame, the_filename)
 
-print("Insights Data data conversion")
+print("Insights Data conversion")
 main()
 input("Fully Completed. Press any key to end.")
