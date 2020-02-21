@@ -1,10 +1,12 @@
 """
 The Insights Melting Pot by Steven Au.
 This script ultimately replaces the excel file that was initially used to convert insights to a usable file also created by Steven Au.
-"""
 
+Dataset metlter to automate data transformation
+"""
 import pandas as pd
 
+# Global Var- for tracking purposes
 the_encode = 'utf_8_sig'
 
 def file_import():
@@ -14,7 +16,7 @@ def file_import():
     
     Note: We are trying to get to header row. THe first row originally did not have a header row.
     
-    Return:
+    Returns:
         df: The read excel dataframe, first sheet only!
         the_file_name: THe file path with the extension name.
     """
@@ -35,7 +37,7 @@ def value_capture(dataframe, reg_calltype):
         dataframe: The dataframe that we are using
         reg_calltype: Has to be entered to the function as 'Units[)]' OR 'Revenue[)]' as a variable
     
-    Retunr:
+    Returns:
         value_capturing: Returns the filtered dataframe columns according to either Units or Revenue
     """
     value_capturing = dataframe.filter(regex=reg_calltype)
@@ -115,7 +117,7 @@ def main():
         1. File Import
         2. Two Dataframes created from the import: Unit and Revenue
         3. Melt each dataframe accordingly
-        4. Main procossing melting pot procedure
+        4. Main processing melting pot procedure
         5. Export the file in CSV format (Due to the limitations of Excel)
     """
     ### Step 1
