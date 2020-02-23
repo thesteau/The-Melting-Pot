@@ -12,7 +12,7 @@ the_encode = 'utf_8_sig'
 def file_import():
     """This is a proprietary function. We are importing the raw download from Insights.
     HOWEVER, if the service is to change, this file reader function will read the entire file and SKIP the first row.
-    If yopu need to skip any more rows or not skip a row, simply put a number.
+    If yopu need to skip any more rows or not skip a row, simply change the number in the argument.
     
     Note: We are trying to get to header row. THe first row originally did not have a header row.
     
