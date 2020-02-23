@@ -25,7 +25,7 @@ def file_import():
         try:
             df = pd.read_excel(the_file_name,skiprows=1,encoding=the_encode)
         except:
-            print("You've probably didn't delete the quotes or this is not an excel file.")
+            print("You probably did not delete the quotes or this is not an acceptable excel file format.")
             print("You can delete the quotes by editing the file name")
             continue
         return df, the_file_name
